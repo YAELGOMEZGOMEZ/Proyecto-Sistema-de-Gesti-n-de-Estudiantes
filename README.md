@@ -64,4 +64,19 @@ while True:
     print("3. Eliminar estudiante")
     print("4. Modificar estudiante")
     print("5. Mostrar lista de estudiantes")
-    print("6. Agregar notas")
+    print("6. Calcular el promedio del estudiante")
+    print("7. Mostrar notas del estudiante")
+    print("8. Generar un reporte de notas")
+    print("9. Generar un reporte de asistencia")
+    print("10. Salir")
+
+    opcion = int(input("Elije una opcion del 1 al 10"))
+
+    # Creamos las condicionales
+    if opcion == 1:
+        matricula = input("Ingrese la matricula: ")
+        nombre = input("Ingrese el nombre: ")
+        apellido = input("Ingrese el apellido: ")
+        edad = input("Ingrese la edad: ")
+        carrera = input("Ingrese la carrera")
+        
