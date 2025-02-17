@@ -1,5 +1,19 @@
 # Sistema de gestión de estudiantes
-estudiantes = {}
+estudiantes = [
+        ("221461768", "Samanta Julieth", "Torres Rodríguez", 18, "Tecnologías Biomédicas", 97.13),
+        ("083208848", "Martha Alicia", "Rivera Santos", 56, "Tecnologías Biomédicas", 98.5),
+        ("209550194", "Erika Janeth", "Correa Rodríguez", 30, "Tecnologías Biomédicas", 94),
+        ("221463876", "Valeria Carolina", "Luna Silva", 18, "Tecnologías Biomédicas", 97.33),
+        ("221226637", "Carlos Alberto", "Gil Martínez", 19, "Tecnologías Biomédicas", 86),
+        ("221930172", "Reyna Esmeralda", "Aguilera Galán", 20, "Tecnologías Biomédicas", 93),
+        ("221461407", "Edna Naomi", "Martín Gallardo", 18, "Tecnologías Biomédicas", 95.5),
+        ("221049972", "Yahir", "Mejía Vázquez", 18, "Tecnologías Biomédicas", 98),
+        ("221773743", "Jacob", "Ávila Núñez", 19, "Tecnologías Biomédicas", 92.33),
+        ("221579726", "Quehat Merari Uziel", "Martínez Castro", 18, "Tecnologías Biomédicas", 90),
+        ("224164501", "Yael", "Gómez Gómez", 19, "Tecnologías Biomédicas", 95.5),
+        ("207593732", "Eddy Armando", "De la Cruz Huezo", 32, "Tecnologías Biomédicas", 90.6),
+        ("221594946", "Angel Antonio", "Torres Bermúdez", 18, "Tecnologías Biomédicas", 93)
+    ]
 
 def agregar_estudiante():
     matricula = input("Ingrese el número de matrícula: ")
