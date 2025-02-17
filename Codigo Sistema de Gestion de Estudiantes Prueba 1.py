@@ -1,3 +1,4 @@
+# Ejemplo hecho con ChatGPT
 # Sistema de gestión de estudiantes
 estudiantes = [
         ("221461768", "Samanta Julieth", "Torres Rodríguez", 18, "Tecnologías Biomédicas", 97.13),
