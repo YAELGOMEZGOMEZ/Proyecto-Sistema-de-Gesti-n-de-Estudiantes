@@ -97,19 +97,20 @@ carrera13 = "Tecnologías Biomédicas"
 
 # Le pedimos al usuario que elija una opcion 
 while True:
+    print("\n=== Sistema de Gestión de Estudiantes ===")
     print("1. Agregar estudiante")
     print("2. Buscar estudiante")
-    print("3. Eliminar estudiante")
-    print("4. Modificar estudiante")
-    print("5. Mostrar lista de estudiantes")
-    print("6. Calcular el promedio del estudiante")
-    print("7. Mostrar notas del estudiante")
-    print("8. Generar un reporte de notas")
-    print("9. Generar un reporte de asistencia")
+    print("3. Modificar estudiante")
+    print("4. Eliminar estudiante")
+    print("5. Listar estudiantes")
+    print("6. Agregar notas")
+    print("7. Calcular promedio de notas")
+    print("8. Registrar asistencia")
+    print("9. Mostrar reporte de estudiante")
     print("10. Salir")
 
-    opcion = int(input("Elije una opcion del 1 al 10"))
-
+    opcion = input("Seleccione una opción: ")
+    
     # Creamos las condicionales
     if opcion == 1:
         matricula = input("Ingrese la matricula: ")
