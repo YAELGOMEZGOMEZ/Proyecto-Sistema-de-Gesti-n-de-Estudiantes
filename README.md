@@ -94,6 +94,7 @@ notas13 = 93
 edad13 = 18
 carrera13 = "Tecnologías Biomédicas"
 
+# Creamos un diccionario 
 
 # Le pedimos al usuario que elija una opcion 
 while True:
