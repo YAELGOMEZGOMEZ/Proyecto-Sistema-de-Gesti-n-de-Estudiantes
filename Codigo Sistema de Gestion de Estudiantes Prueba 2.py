@@ -1,4 +1,4 @@
-# Ejemplo hecho con Claude 
+
 # Sistema de gestión de estudiantes
 estudiantes = {}
 
