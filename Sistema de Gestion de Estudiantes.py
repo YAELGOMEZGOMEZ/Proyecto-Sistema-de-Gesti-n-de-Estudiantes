@@ -152,23 +152,15 @@ while True:
                 contador += 1
             
             # Pedir el número de la materia
-            try:
-                materia_num = int(input("Seleccione el número de la materia: "))
-            except:
-                print("¡Debes ingresar un número!")
-                continue
-            
+            materia_num = int(input("Seleccione el número de la materia: "))
+        
             # Verificar si el número de materia es válido
             if materia_num >= 1 and materia_num <= len(materias):
                 # Obtener la materia seleccionada
                 materia_seleccionada = materias[materia_num - 1]
                 
                 # Pedir la nota
-                try:
-                    nota = float(input(f"Ingrese la nota para {materia_seleccionada}: "))
-                except:
-                    print("¡La nota debe ser un número!")
-                    continue
+                nota = float(input(f"Ingrese la nota para {materia_seleccionada}: "))
                 
                 # Guardar la nota en el estudiante
                 estudiantes[matricula]["notas"][materia_seleccionada] = nota
