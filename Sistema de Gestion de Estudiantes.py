@@ -88,7 +88,7 @@ while True:
     # Buscar estudiante
     elif opcion == "2":
         criterio = input("Ingrese el nombre, apellido o matrícula del estudiante: ")
-        # Variable para saber si se encontró al estudiante
+         # Variable para saber si se encontró al estudiante
 
     # Recorremos todos los estudiantes
         for matricula, datos in estudiantes.items():
@@ -179,22 +179,24 @@ while True:
                 contador += 1
             
             # Pedir el número de la materia
-            try:   
+            try:
                 materia_num = int(input("Seleccione el número de la materia: "))
             except:
-                print("Tienes que poner un numero")
+                print("¡Debes ingresar un número!")
                 continue
+            
             # Verificar si el número de materia es válido
             if materia_num >= 1 and materia_num <= len(materias):
                 # Obtener la materia seleccionada
-                    materia_seleccionada = materias[materia_num - 1]
-    
+                materia_seleccionada = materias[materia_num - 1]
+                
                 # Pedir la nota
-            try:
-                nota = float(input(f"Ingrese la nota para {materia_seleccionada}: "))
-            except:
-                print("Tienes que escribir un numero")
-                continue
+                try:
+                    nota = float(input(f"Ingrese la nota para {materia_seleccionada}: "))
+                except:
+                    print("¡La nota debe ser un número!")
+                    continue
+                
                 # Guardar la nota en el estudiante
                 estudiantes[matricula]["notas"][materia_seleccionada] = nota
                 print(f"Nota de {materia_seleccionada} agregada correctamente.")
