@@ -88,7 +88,7 @@ while True:
     # Buscar estudiante
     elif opcion == "2":
         criterio = input("Ingrese el nombre, apellido o matrícula del estudiante: ")
-        encontrado = False  # Variable para saber si se encontró al estudiante
+        # Variable para saber si se encontró al estudiante
 
     # Recorremos todos los estudiantes
         for matricula, datos in estudiantes.items():
