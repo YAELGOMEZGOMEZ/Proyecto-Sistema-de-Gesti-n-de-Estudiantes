@@ -70,8 +70,8 @@ while True:
         if matricula in estudiantes:
             print("Este estudiante ya está registrado.")
         else:
-            nombre = input("Ingrese el nombre: ")
-            apellido = input("Ingrese el apellido: ")
+            nombre = str(input("Ingrese el nombre: "))
+            apellido = str(input("Ingrese el apellido: "))
             edad = int(input("Ingrese la edad: "))
             carrera = input("Ingrese la carrera: ")
             notas = {materia: 0.0 for materia in materias}  # Inicializa las notas con 0.0 de calificacion para todas las materias
