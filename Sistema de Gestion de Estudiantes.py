@@ -87,25 +87,53 @@ while True:
 
     # Buscar estudiante
     elif opcion == "2":
-        matricula = input("Ingrese la matrícula del estudiante: ")
-        if matricula in estudiantes:
-            datos = estudiantes[matricula]
-            print("\nEstudiante encontrado:")
-            print(f"Matrícula: {matricula}")
-            print(f"Nombre: {datos['nombre']} {datos['apellido']}")
-            print(f"Edad: {datos['edad']}")
-            print(f"Carrera: {datos['carrera']}")
-        else:
-            print("No se encontró al estudiante con esa matrícula")
-    # Modificar estudiante
+        criterio = input("Ingrese el nombre, apellido o matrícula del estudiante: ")
+        encontrado = False  # Variable para saber si se encontró al estudiante
+
+    # Recorremos todos los estudiantes
+        for matricula, datos in estudiantes.items():
+        # Comparamos el criterio con el nombre, apellido o matrícula
+            if (criterio.lower() == datos['nombre'].lower() or
+                criterio.lower() == datos['apellido'].lower() or
+                criterio == matricula):
+            
+                print("\nEstudiante encontrado:")
+                print(f"Matrícula: {matricula}")
+                print(f"Nombre: {datos['nombre']} {datos['apellido']}")
+                print(f"Edad: {datos['edad']}")
+                print(f"Carrera: {datos['carrera']}")
+                encontrado = True  # Marcamos que se encontró al estudiante
+            
+
+    # Si no se encontró al estudiante, mostramos un mensaje
+        if not encontrado:
+            print("No se encontró al estudiante con ese nombre, apellido o matrícula.")
+
+        # Modificar estudiante
     elif opcion == "3":
         matricula = input("Ingrese la matrícula del estudiante a modificar: ")
         if matricula in estudiantes:
             print("Deje en blanco si no quiere modificar el dato.")
-            nombre = input("Nuevo nombre: ")
-            apellido = input("Nuevo apellido: ")
-            edad = input("Nueva edad: ")
-            carrera = input("Nueva carrera: ")
+            try:
+                nombre = input("Nuevo nombre: ")
+            except:
+                print("No puedes escribir numeros, por favor usa solo letras.")
+                continue
+            try:
+                apellido = input("Nuevo apellido: ")
+            except:
+                print("No puedes escribir numeros, por favor solo usa letras.")
+                continue
+            try:
+                edad = int(input("Nueva edad: "))
+            except:
+                print("Tienes que poner un numero.")
+                continue
+            try:
+                carrera = input("Nueva carrera: ")
+            except:
+                print("No puedes escribir numeros, por favor solo usa letras.")
+                continue
 
             if nombre:
                 estudiantes[matricula]["nombre"] = nombre
@@ -152,16 +180,22 @@ while True:
                 contador += 1
             
             # Pedir el número de la materia
-            materia_num = int(input("Seleccione el número de la materia: "))
-        
+            try:   
+                materia_num = int(input("Seleccione el número de la materia: "))
+            except:
+                print("Tienes que poner un numero")
+                continue
             # Verificar si el número de materia es válido
             if materia_num >= 1 and materia_num <= len(materias):
                 # Obtener la materia seleccionada
-                materia_seleccionada = materias[materia_num - 1]
-                
+                    materia_seleccionada = materias[materia_num - 1]
+    
                 # Pedir la nota
+            try:
                 nota = float(input(f"Ingrese la nota para {materia_seleccionada}: "))
-                
+            except:
+                print("Tienes que escribir un numero")
+                continue
                 # Guardar la nota en el estudiante
                 estudiantes[matricula]["notas"][materia_seleccionada] = nota
                 print(f"Nota de {materia_seleccionada} agregada correctamente.")
