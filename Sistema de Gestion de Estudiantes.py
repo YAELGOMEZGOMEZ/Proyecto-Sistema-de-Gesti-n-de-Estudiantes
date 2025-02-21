@@ -113,7 +113,6 @@ while True:
     elif opcion == "3":
         matricula = input("Ingrese la matrícula del estudiante a modificar: ")
         if matricula in estudiantes:
-            print("Deje en blanco si no quiere modificar el dato.")
             try:
                 nombre = input("Nuevo nombre: ")
             except:
