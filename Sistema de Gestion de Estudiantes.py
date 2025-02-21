@@ -176,7 +176,7 @@ while True:
         if matricula in estudiantes:
             notas = estudiantes[matricula]["notas"].values()
             promedio = sum(notas) / len(notas)
-            print(f"El promedio es: {promedio:.2f}")
+            print(f"El promedio es: {promedio}")
         else:
             print("Estudiante no encontrado.")
 
